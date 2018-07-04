@@ -646,7 +646,7 @@ module.exports = ".vertical-menu {\r\n  width: 200px; /* Set a width if you like
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"vertical-menu\">\n  <a href=\"#\" class=\"active\">Home</a>\n  <a href=' ./ClinicLogin'>Login Page</a>\n  <a href='./DoctorsClinics'>Supervisor View</a>\n</div>\n"
+module.exports = "\n<div class=\"vertical-menu\">\n  <a href=\"#\" class=\"active\">Home</a>\n  <a href='http://127.0.0.1:8000/app/ClinicLogin'>Login Page</a>\n  <a href='./DoctorsClinics'>Supervisor View</a>\n</div>\n"
 
 /***/ }),
 
