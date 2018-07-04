@@ -239,12 +239,10 @@ var AppModule = /** @class */ (function () {
                     {
                         path: '',
                         component: _main_page_main_page_component__WEBPACK_IMPORTED_MODULE_11__["MainPageComponent"],
-                        children: [
-                            {
-                                path: 'ClinicLogin',
-                                component: _clinic_login_clinic_login_component__WEBPACK_IMPORTED_MODULE_14__["ClinicLoginComponent"]
-                            }
-                        ]
+                    },
+                    {
+                        path: 'ClinicLogin',
+                        component: _clinic_login_clinic_login_component__WEBPACK_IMPORTED_MODULE_14__["ClinicLoginComponent"]
                     }
                 ])
             ],
@@ -648,7 +646,7 @@ module.exports = ".vertical-menu {\r\n  width: 200px; /* Set a width if you like
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"vertical-menu\">\n  <a href=\"#\" class=\"active\">Home</a>\n  <a href='./app/ClinicLogin'>Login Page</a>\n  <a href=' http://172.16.56.180:4200/DoctorsClinics'>Supervisor View</a>\n</div>\n"
+module.exports = "\n<div class=\"vertical-menu\">\n  <a href=\"#\" class=\"active\">Home</a>\n  <a (click)=\"GotoLoginPage()\">Login Page</a>\n  <a href=' http://172.16.56.180:4200/DoctorsClinics'>Supervisor View</a>\n</div>\n\n"
 
 /***/ }),
 
@@ -663,6 +661,7 @@ module.exports = "\n<div class=\"vertical-menu\">\n  <a href=\"#\" class=\"activ
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainPageComponent", function() { return MainPageComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -673,10 +672,15 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var MainPageComponent = /** @class */ (function () {
-    function MainPageComponent() {
+    function MainPageComponent(router) {
+        this.router = router;
     }
     MainPageComponent.prototype.ngOnInit = function () {
+    };
+    MainPageComponent.prototype.GotoLoginPage = function () {
+        this.router.navigate(['ClinicLogin']);
     };
     MainPageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -684,7 +688,7 @@ var MainPageComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./main-page.component.html */ "./src/app/main-page/main-page.component.html"),
             styles: [__webpack_require__(/*! ./main-page.component.css */ "./src/app/main-page/main-page.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], MainPageComponent);
     return MainPageComponent;
 }());
