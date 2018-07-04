@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     //
-    public function index(){
-        //return redirect('app');
+    public function index(Request $req){
+        return redirect('/app');
         return view('welcome');
     }
 
