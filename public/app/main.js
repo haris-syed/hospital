@@ -225,10 +225,6 @@ var AppModule = /** @class */ (function () {
                         component: _doctors_clinics_doctors_clinics_component__WEBPACK_IMPORTED_MODULE_10__["DoctorsClinicsComponent"]
                     },
                     {
-                        path: 'ClinicLogin',
-                        component: _clinic_login_clinic_login_component__WEBPACK_IMPORTED_MODULE_14__["ClinicLoginComponent"]
-                    },
-                    {
                         path: 'SupervisorPanel',
                         component: _supervisor_panel_supervisor_panel_component__WEBPACK_IMPORTED_MODULE_15__["SupervisorPanelComponent"]
                     },
@@ -242,7 +238,13 @@ var AppModule = /** @class */ (function () {
                     },
                     {
                         path: '',
-                        component: _main_page_main_page_component__WEBPACK_IMPORTED_MODULE_11__["MainPageComponent"]
+                        component: _main_page_main_page_component__WEBPACK_IMPORTED_MODULE_11__["MainPageComponent"],
+                        children: [
+                            {
+                                path: 'ClinicLogin',
+                                component: _clinic_login_clinic_login_component__WEBPACK_IMPORTED_MODULE_14__["ClinicLoginComponent"]
+                            }
+                        ]
                     }
                 ])
             ],
