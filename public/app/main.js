@@ -610,6 +610,7 @@ var LoginPageComponent = /** @class */ (function () {
             Message: ''
         };
         this.retrieveDataService.getData();
+        this.retrieveDataService.sendData();
     };
     LoginPageComponent.prototype.SendData = function () {
     };
@@ -658,9 +659,28 @@ var RecordServiceService = /** @class */ (function () {
     function RecordServiceService(Http) {
         this.Http = Http;
         this.url = 'http://192.168.100.7:8000/posturl';
+        this.Posturl = 'http://192.168.100.7:8000/posturl';
+        this.headers = new Headers();
+        this.postData = {
+            username: 'Shahrukh',
+            password: 'Haris' // the user's password
+        };
+        this.headers.append('Content-Type', 'application/json');
+        this.headers.append('Accept', 'application/json');
     }
     RecordServiceService.prototype.getData = function () {
         return this.Http.get(this.url).subscribe(function (data) { return (console.log(data)); });
+    };
+    RecordServiceService.prototype.sendData = function () {
+        this.Http.post(this.Posturl, {
+            Username: 'Shahrukh',
+            Password: 'Haris'
+        })
+            .subscribe(function (res) {
+            console.log(res);
+        }, function (err) {
+            console.log('Error occured');
+        });
     };
     RecordServiceService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
