@@ -217,7 +217,7 @@ var AppModule = /** @class */ (function () {
                 angular_calendar__WEBPACK_IMPORTED_MODULE_15__["CalendarModule"].forRoot(),
                 _angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterModule"].forRoot([
                     {
-                        path: 'Login',
+                        path: '',
                         component: _login_page_login_page_component__WEBPACK_IMPORTED_MODULE_4__["LoginPageComponent"]
                     },
                     {
@@ -237,7 +237,7 @@ var AppModule = /** @class */ (function () {
                         component: _edit_appointment_edit_appointment_component__WEBPACK_IMPORTED_MODULE_12__["EditAppointmentComponent"]
                     },
                     {
-                        path: '',
+                        path: 'ClinicLogin',
                         component: _clinic_login_clinic_login_component__WEBPACK_IMPORTED_MODULE_13__["ClinicLoginComponent"]
                     }
                 ])
