@@ -167,11 +167,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
 /* harmony import */ var _doctors_clinics_doctors_clinics_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./doctors-clinics/doctors-clinics.component */ "./src/app/doctors-clinics/doctors-clinics.component.ts");
-/* harmony import */ var _main_page_main_page_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./main-page/main-page.component */ "./src/app/main-page/main-page.component.ts");
-/* harmony import */ var _add_appointment_add_appointment_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./add-appointment/add-appointment.component */ "./src/app/add-appointment/add-appointment.component.ts");
-/* harmony import */ var _edit_appointment_edit_appointment_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./edit-appointment/edit-appointment.component */ "./src/app/edit-appointment/edit-appointment.component.ts");
-/* harmony import */ var _clinic_login_clinic_login_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./clinic-login/clinic-login.component */ "./src/app/clinic-login/clinic-login.component.ts");
-/* harmony import */ var _supervisor_panel_supervisor_panel_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./supervisor-panel/supervisor-panel.component */ "./src/app/supervisor-panel/supervisor-panel.component.ts");
+/* harmony import */ var _add_appointment_add_appointment_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./add-appointment/add-appointment.component */ "./src/app/add-appointment/add-appointment.component.ts");
+/* harmony import */ var _edit_appointment_edit_appointment_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./edit-appointment/edit-appointment.component */ "./src/app/edit-appointment/edit-appointment.component.ts");
+/* harmony import */ var _clinic_login_clinic_login_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./clinic-login/clinic-login.component */ "./src/app/clinic-login/clinic-login.component.ts");
+/* harmony import */ var _supervisor_panel_supervisor_panel_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./supervisor-panel/supervisor-panel.component */ "./src/app/supervisor-panel/supervisor-panel.component.ts");
+/* harmony import */ var angular_calendar__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! angular-calendar */ "./node_modules/angular-calendar/fesm5/angular-calendar.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -203,11 +203,10 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
                 _login_page_login_page_component__WEBPACK_IMPORTED_MODULE_4__["LoginPageComponent"],
                 _doctors_clinics_doctors_clinics_component__WEBPACK_IMPORTED_MODULE_10__["DoctorsClinicsComponent"],
-                _main_page_main_page_component__WEBPACK_IMPORTED_MODULE_11__["MainPageComponent"],
-                _add_appointment_add_appointment_component__WEBPACK_IMPORTED_MODULE_12__["AddAppointmentComponent"],
-                _edit_appointment_edit_appointment_component__WEBPACK_IMPORTED_MODULE_13__["EditAppointmentComponent"],
-                _clinic_login_clinic_login_component__WEBPACK_IMPORTED_MODULE_14__["ClinicLoginComponent"],
-                _supervisor_panel_supervisor_panel_component__WEBPACK_IMPORTED_MODULE_15__["SupervisorPanelComponent"]
+                _add_appointment_add_appointment_component__WEBPACK_IMPORTED_MODULE_11__["AddAppointmentComponent"],
+                _edit_appointment_edit_appointment_component__WEBPACK_IMPORTED_MODULE_12__["EditAppointmentComponent"],
+                _clinic_login_clinic_login_component__WEBPACK_IMPORTED_MODULE_13__["ClinicLoginComponent"],
+                _supervisor_panel_supervisor_panel_component__WEBPACK_IMPORTED_MODULE_14__["SupervisorPanelComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -215,6 +214,7 @@ var AppModule = /** @class */ (function () {
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HttpClientModule"],
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModalModule"].forRoot(),
                 _angular_http__WEBPACK_IMPORTED_MODULE_9__["JsonpModule"],
+                angular_calendar__WEBPACK_IMPORTED_MODULE_15__["CalendarModule"].forRoot(),
                 _angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterModule"].forRoot([
                     {
                         path: 'Login',
@@ -226,23 +226,19 @@ var AppModule = /** @class */ (function () {
                     },
                     {
                         path: 'SupervisorPanel',
-                        component: _supervisor_panel_supervisor_panel_component__WEBPACK_IMPORTED_MODULE_15__["SupervisorPanelComponent"]
+                        component: _supervisor_panel_supervisor_panel_component__WEBPACK_IMPORTED_MODULE_14__["SupervisorPanelComponent"]
                     },
                     {
                         path: 'AddAppointments',
-                        component: _add_appointment_add_appointment_component__WEBPACK_IMPORTED_MODULE_12__["AddAppointmentComponent"]
+                        component: _add_appointment_add_appointment_component__WEBPACK_IMPORTED_MODULE_11__["AddAppointmentComponent"]
                     },
                     {
                         path: 'EditAppointment',
-                        component: _edit_appointment_edit_appointment_component__WEBPACK_IMPORTED_MODULE_13__["EditAppointmentComponent"]
+                        component: _edit_appointment_edit_appointment_component__WEBPACK_IMPORTED_MODULE_12__["EditAppointmentComponent"]
                     },
                     {
                         path: '',
-                        component: _main_page_main_page_component__WEBPACK_IMPORTED_MODULE_11__["MainPageComponent"],
-                    },
-                    {
-                        path: 'ClinicLogin',
-                        component: _clinic_login_clinic_login_component__WEBPACK_IMPORTED_MODULE_14__["ClinicLoginComponent"]
+                        component: _clinic_login_clinic_login_component__WEBPACK_IMPORTED_MODULE_13__["ClinicLoginComponent"]
                     }
                 ])
             ],
@@ -275,7 +271,7 @@ module.exports = "@import url(https://fonts.googleapis.com/css?family=Roboto:300
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"login-page\">\n  <div class=\"form\">\n    <form class=\"login-form\" method=\"post\">\n      <input type=\"text\" id= \"Username\" placeholder=\"username\" name=\"UserID\"/>\n      <input type=\"text\" id=\"Passid\" placeholder=\"password\" name=\"PassID\"/>\n      <div class=\"dropdown\">\n        <button class=\"dropbtn\">{{Rolebox}}</button>\n        <div class=\"dropdown-content\">\n          <a (click)=\"UpdateRole(item)\" *ngFor=\"let item of AvalaibleRoles\">{{item}}</a>\n        </div>\n      </div>\n      <button type=\"submit\" onclick=\"location.href = 'http://172.16.56.180:4200/SupervisorPanel';\" >Post login</button>\n    </form>\n  </div>\n</div>\n\n<div class=\"login-page\">\n  <div class=\"form\">\n    <form class=\"login-form\" method=\"get\">\n      <input type=\"text\" id= \"Username2\" placeholder=\"username\" name=\"UserID\"/>\n      <input type=\"text\" id=\"Passid2\" placeholder=\"password\" name=\"PassID\"/>\n      <div class=\"dropdown\">\n        <button class=\"dropbtn\">{{Rolebox}}</button>\n        <div class=\"dropdown-content\">\n          <a (click)=\"UpdateRole(item)\" *ngFor=\"let item of AvalaibleRoles\">{{item}}</a>\n        </div>\n      </div>\n      <button type=\"submit\" onclick=\"location.href = 'http://172.16.56.180:4200/SupervisorPanel';\" >Get login</button>\n    </form>\n  </div>\n</div>\n"
+module.exports = "\n<div class=\"login-page\">\n  <div class=\"form\">\n    <form class=\"login-form\" method=\"post\">\n      <input type=\"text\" id= \"Username\" placeholder=\"username\" name=\"UserID\"/>\n      <input type=\"text\" id=\"Passid\" placeholder=\"password\" name=\"PassID\"/>\n      <div class=\"dropdown\">\n        <button class=\"dropbtn\">{{Rolebox}}</button>\n        <div class=\"dropdown-content\">\n          <a (click)=\"UpdateRole(item)\" *ngFor=\"let item of AvalaibleRoles\">{{item}}</a>\n        </div>\n      </div>\n      <button type=\"submit\" (click)=\"RouterFunction()\" >Post login</button>\n    </form>\n  </div>\n</div>\n\n<div class=\"login-page\">\n  <div class=\"form\">\n    <form class=\"login-form\" method=\"get\">\n      <input type=\"text\" id= \"Username2\" placeholder=\"username\" name=\"UserID\"/>\n      <input type=\"text\" id=\"Passid2\" placeholder=\"password\" name=\"PassID\"/>\n      <div class=\"dropdown\">\n        <button class=\"dropbtn\">{{Rolebox}}</button>\n        <div class=\"dropdown-content\">\n          <a (click)=\"UpdateRole(item)\" *ngFor=\"let item of AvalaibleRoles\">{{item}}</a>\n        </div>\n      </div>\n      <button type=\"submit\"  (click)=\"RouterFunction()\" >Get login</button>\n    </form>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -290,6 +286,7 @@ module.exports = "\n<div class=\"login-page\">\n  <div class=\"form\">\n    <for
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ClinicLoginComponent", function() { return ClinicLoginComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -300,8 +297,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var ClinicLoginComponent = /** @class */ (function () {
-    function ClinicLoginComponent() {
+    function ClinicLoginComponent(router) {
+        this.router = router;
     }
     ClinicLoginComponent.prototype.ngOnInit = function () {
         this.AvalaibleRoles = ['Supervisor', 'Doctor', 'FrontDest'];
@@ -310,13 +309,16 @@ var ClinicLoginComponent = /** @class */ (function () {
     ClinicLoginComponent.prototype.UpdateRole = function (Role) {
         this.Rolebox = Role;
     };
+    ClinicLoginComponent.prototype.RouterFunction = function () {
+        this.router.navigate(['SupervisorPanel']);
+    };
     ClinicLoginComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-clinic-login',
             template: __webpack_require__(/*! ./clinic-login.component.html */ "./src/app/clinic-login/clinic-login.component.html"),
             styles: [__webpack_require__(/*! ./clinic-login.component.css */ "./src/app/clinic-login/clinic-login.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], ClinicLoginComponent);
     return ClinicLoginComponent;
 }());
@@ -597,7 +599,6 @@ var LoginPageComponent = /** @class */ (function () {
         this.records = {};
     }
     LoginPageComponent.prototype.ngOnInit = function () {
-        var _this = this;
         this.Send = {
             ID: 'i160034',
             title: 'Shahrukh',
@@ -608,10 +609,9 @@ var LoginPageComponent = /** @class */ (function () {
             title: '',
             Message: ''
         };
-        this.retrieveDataService.getData().subscribe(function (data) { return _this.records = data; });
+        this.retrieveDataService.getData();
     };
     LoginPageComponent.prototype.SendData = function () {
-        this.retrieveDataService.sendData(this.Send);
     };
     LoginPageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -622,75 +622,6 @@ var LoginPageComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_record_service_service__WEBPACK_IMPORTED_MODULE_1__["RecordServiceService"]])
     ], LoginPageComponent);
     return LoginPageComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/main-page/main-page.component.css":
-/*!***************************************************!*\
-  !*** ./src/app/main-page/main-page.component.css ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".vertical-menu {\r\n  width: 200px; /* Set a width if you like */\r\n}\r\n\r\n.vertical-menu a {\r\n  background-color: #eee; /* Grey background color */\r\n  color: black; /* Black text color */\r\n  display: block; /* Make the links appear below each other */\r\n  padding: 12px; /* Add some padding */\r\n  text-decoration: none; /* Remove underline from links */\r\n}\r\n\r\n.vertical-menu a:hover {\r\n  background-color: #ccc; /* Dark grey background on mouse-over */\r\n}\r\n\r\n.vertical-menu a.active {\r\n  background-color: #4CAF50; /* Add a green color to the \"active/current\" link */\r\n  color: white;\r\n}\r\n\r\ndiv {\r\n  width: 100px;\r\n  height: 100px;\r\n  background-color: red;\r\n\r\n  position: absolute;\r\n  top:0;\r\n  bottom: 0;\r\n  left: 0;\r\n  right: 0;\r\n\r\n  margin: auto;\r\n}\r\n"
-
-/***/ }),
-
-/***/ "./src/app/main-page/main-page.component.html":
-/*!****************************************************!*\
-  !*** ./src/app/main-page/main-page.component.html ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n<div class=\"vertical-menu\">\n  <a href=\"#\" class=\"active\">Home</a>\n  <a (click)=\"GotoLoginPage()\">Login Page</a>\n  <a href=' http://172.16.56.180:4200/DoctorsClinics'>Supervisor View</a>\n</div>\n\n"
-
-/***/ }),
-
-/***/ "./src/app/main-page/main-page.component.ts":
-/*!**************************************************!*\
-  !*** ./src/app/main-page/main-page.component.ts ***!
-  \**************************************************/
-/*! exports provided: MainPageComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainPageComponent", function() { return MainPageComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var MainPageComponent = /** @class */ (function () {
-    function MainPageComponent(router) {
-        this.router = router;
-    }
-    MainPageComponent.prototype.ngOnInit = function () {
-    };
-    MainPageComponent.prototype.GotoLoginPage = function () {
-        this.router.navigate(['ClinicLogin']);
-    };
-    MainPageComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-main-page',
-            template: __webpack_require__(/*! ./main-page.component.html */ "./src/app/main-page/main-page.component.html"),
-            styles: [__webpack_require__(/*! ./main-page.component.css */ "./src/app/main-page/main-page.component.css")]
-        }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
-    ], MainPageComponent);
-    return MainPageComponent;
 }());
 
 
@@ -726,18 +657,10 @@ var httpOptions = {
 var RecordServiceService = /** @class */ (function () {
     function RecordServiceService(Http) {
         this.Http = Http;
-        this.url = 'http://172.16.15.104:80/about';
-        this.Sendurl = 'http://172.16.15.104:80/senddata';
+        this.url = 'http://192.168.100.7:8000/posturl';
     }
     RecordServiceService.prototype.getData = function () {
-        return this.Http.get(this.url);
-    };
-    RecordServiceService.prototype.sendData = function (hero) {
-        return this.Http.post(this.Sendurl, hero, httpOptions).subscribe(function (res) {
-            console.log(res);
-        }, function (err) {
-            console.log(err);
-        });
+        return this.Http.get(this.url).subscribe(function (data) { return (console.log(data)); });
     };
     RecordServiceService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
@@ -770,7 +693,7 @@ module.exports = ".header {\r\n  background-color: #f1f1f1;\r\n  padding: 20px;\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<html>\n\n    <div class=\"header\">\n      <h1>Supervisor Panel</h1>\n    </div>\n\n    <body>\n\n      <div class=\"center\">\n        <button class=\"button button1\"  onclick=\"location.href = 'http://172.16.56.180:4200/DoctorsClinics';\">Manage Doctors</button>\n        <button class=\"button button2\">Assign Doctors</button>\n        <button class=\"button button3\">Show Notifications</button>\n        <button class=\"button button3\">Log Out</button>\n      </div>\n\n    </body>\n\n\n\n</html>\n"
+module.exports = "<html>\n\n    <div class=\"header\">\n      <h1>Supervisor Panel</h1>\n    </div>\n\n    <body>\n\n      <div class=\"center\">\n        <button class=\"button button1\"  (click)=\"RouterFunction()\">Manage Doctors</button>\n        <button class=\"button button2\">Assign Doctors</button>\n        <button class=\"button button3\">Show Notifications</button>\n        <button class=\"button button3\">Log Out</button>\n      </div>\n\n    </body>\n\n\n\n</html>\n"
 
 /***/ }),
 
@@ -785,6 +708,7 @@ module.exports = "<html>\n\n    <div class=\"header\">\n      <h1>Supervisor Pan
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SupervisorPanelComponent", function() { return SupervisorPanelComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -795,10 +719,15 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var SupervisorPanelComponent = /** @class */ (function () {
-    function SupervisorPanelComponent() {
+    function SupervisorPanelComponent(router) {
+        this.router = router;
     }
     SupervisorPanelComponent.prototype.ngOnInit = function () {
+    };
+    SupervisorPanelComponent.prototype.RouterFunction = function () {
+        this.router.navigate(['DoctorsClinics']);
     };
     SupervisorPanelComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -806,7 +735,7 @@ var SupervisorPanelComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./supervisor-panel.component.html */ "./src/app/supervisor-panel/supervisor-panel.component.html"),
             styles: [__webpack_require__(/*! ./supervisor-panel.component.css */ "./src/app/supervisor-panel/supervisor-panel.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], SupervisorPanelComponent);
     return SupervisorPanelComponent;
 }());
