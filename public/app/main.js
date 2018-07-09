@@ -669,7 +669,7 @@ var RecordServiceService = /** @class */ (function () {
         this.headers.append('Accept', 'application/json');
     }
     RecordServiceService.prototype.getData = function () {
-        return this.Http.get(this.url).subscribe(function (data) { return (console.log(data)); });
+        // return this.Http.get(this.url).subscribe(data => (console.log(data)));
     };
     RecordServiceService.prototype.sendData = function () {
         this.Http.post(this.Posturl, {
