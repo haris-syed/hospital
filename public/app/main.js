@@ -678,8 +678,6 @@ var RecordServiceService = /** @class */ (function () {
         })
             .subscribe(function (res) {
             console.log(res);
-        }, function (err) {
-            console.log('Error occured');
         });
     };
     RecordServiceService = __decorate([
