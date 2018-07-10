@@ -610,7 +610,8 @@ var LoginPageComponent = /** @class */ (function () {
             Message: ''
         };
         this.retrieveDataService.getData();
-        this.retrieveDataService.sendData();
+        this.retrieveDataService.sendData()
+            .subscribe(function (hero) { return console.log(hero); });
     };
     LoginPageComponent.prototype.SendData = function () {
     };
@@ -653,7 +654,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var httpOptions = {
-    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({ 'Content-Type': 'application/json' })
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+        'Content-Type': 'application/json',
+        'Authorization': 'my-auth-token'
+    })
 };
 var RecordServiceService = /** @class */ (function () {
     function RecordServiceService(Http) {
@@ -672,13 +676,8 @@ var RecordServiceService = /** @class */ (function () {
         // return this.Http.get(this.url).subscribe(data => (console.log(data)));
     };
     RecordServiceService.prototype.sendData = function () {
-        this.Http.post(this.Posturl, {
-            Username: 'Shahrukh',
-            Password: 'Haris'
-        })
-            .subscribe(function (res) {
-            console.log(res);
-        });
+        return this.Http.post(this.Posturl, this.postData, httpOptions)
+            .pipe();
     };
     RecordServiceService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
