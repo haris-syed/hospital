@@ -566,7 +566,7 @@ module.exports = "@import url(https://fonts.googleapis.com/css?family=Roboto:300
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"login-page\">\n  <div class=\"form\">\n    <form class=\"register-form\">\n      <input type=\"text\" placeholder=\"name\"/>\n      <input type=\"password\" placeholder=\"password\"/>\n      <input type=\"text\" placeholder=\"email address\"/>\n      <button>create</button>\n      <p class=\"message\">Already registered? <a href=\"#\">Sign In</a></p>\n    </form>\n    <form class=\"login-form\" method=\"post\" action=\"http://172.16.15.104:80/senddata\">\n      <input type=\"text\" id= \"Username\" placeholder=\"username\" [(ngModel)]=\"Data.Username \" name=\"title\"/>\n      <input type=\"text\" id=\"Passid\" placeholder=\"password\" [(ngModel)]=\"Data.PassId\" name=\"Message\"/>\n      <button type=\"submit\">login</button>\n      <p class=\"message\">Not registered? <a href=\"#\">Create an account</a></p>\n    </form>\n  </div>\n\n\n  <h1>{{Data.ID}} {{Data.Message}}</h1>\n  <h1> {{records | json}} </h1>\n"
+module.exports = "\n<div class=\"login-page\">\n  <div class=\"form\">\n    <form class=\"register-form\">\n      <input type=\"text\" placeholder=\"name\"/>\n      <input type=\"password\" placeholder=\"password\"/>\n      <input type=\"text\" placeholder=\"email address\"/>\n      <button>create</button>\n      <p class=\"message\">Already registered? <a href=\"#\">Sign In</a></p>\n    </form>\n    <form class=\"login-form\" method=\"post\" action=\"http://192.168.100.3:8000/posturl\">\n      <input type=\"text\" id= \"Username\" placeholder=\"username\" [(ngModel)]=\"Data.Username \" name=\"title\"/>\n      <input type=\"text\" id=\"Passid\" placeholder=\"password\" [(ngModel)]=\"Data.PassId\" name=\"Message\"/>\n      <button (click)=\"SendData()\" type=\"submit\">login</button>\n      <p class=\"message\">Not registered? <a href=\"#\">Create an account</a></p>\n    </form>\n  </div>\n"
 
 /***/ }),
 
@@ -610,10 +610,9 @@ var LoginPageComponent = /** @class */ (function () {
             Message: ''
         };
         this.retrieveDataService.getData();
-        this.retrieveDataService.sendData()
-            .subscribe(function (hero) { return console.log(hero); });
     };
     LoginPageComponent.prototype.SendData = function () {
+        this.retrieveDataService.sendData();
     };
     LoginPageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -662,8 +661,8 @@ var httpOptions = {
 var RecordServiceService = /** @class */ (function () {
     function RecordServiceService(Http) {
         this.Http = Http;
-        this.url = 'http://192.168.100.7:8000/posturl';
-        this.Posturl = 'http://192.168.100.7:8000/posturl';
+        this.url = 'http://192.168.100.3:8000/posturl';
+        this.Posturl = 'http://192.168.100.3:8000/posturl';
         this.headers = new Headers();
         this.postData = {
             username: 'Shahrukh',
@@ -676,8 +675,7 @@ var RecordServiceService = /** @class */ (function () {
         // return this.Http.get(this.url).subscribe(data => (console.log(data)));
     };
     RecordServiceService.prototype.sendData = function () {
-        return this.Http.post(this.Posturl, this.postData, httpOptions)
-            .pipe();
+        this.Http.post(this.Posturl, { moo: 'foo', goo: 'loo' }).subscribe(function (res) { return console.log(res); });
     };
     RecordServiceService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
